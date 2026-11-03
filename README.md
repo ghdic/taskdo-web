@@ -13,3 +13,5 @@ GitHub Pages용 정적 홈페이지, 개인정보처리방침과 이용약관. �
 다운로드 링크는 검증된 v0.10.0 자산 이름으로 고정한다. 미리보기이므로 releases/latest 링크를 사용하지 않는다. 앱 릴리스는 Git에 ZIP을 추가하지 않고 GitHub Releases에 업로드한다.
 
 Google OAuth 설정과 도메인 검증은 OAUTH_SETUP.md를 참고한다.
+
+로컬 구조 확인은 `python3 tools/check_site.py`로 수행한다. 개발 서버는 필요 없다. 배포·브라우저 확인 결과와 남은 검증은 COMPLETE.md에 기록한다.
