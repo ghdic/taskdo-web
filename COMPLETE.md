@@ -29,4 +29,4 @@
 ## Search Console HTML 확인 파일
 
 - 추가 파일: google5880cf420efa6ac1.html. 원본 바이트 일치를 확인했다.
-- GitHub Pages 게시와 외부 HTTP 응답 검증은 진행 중이다. Search Console의 확인 버튼 및 OAuth 재심사는 아직 실행하지 않았다.
+- GitHub Pages 게시 완료. https://ghdic.github.io/taskdo-web/google5880cf420efa6ac1.html 에서 비로그인 HTTP 200·리디렉션 없음·원본 53바이트 일치를 확인했다. Search Console의 확인 버튼 및 OAuth 재심사는 아직 실행하지 않았다.
