@@ -21,3 +21,9 @@
 - https://support.google.com/cloud/answer/13804266
 - https://developers.google.com/identity/protocols/oauth2/native-app
 - https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
+
+## Search Console HTML 파일 인증
+
+현재 사용자가 선택한 URL-prefix 속성은 `https://ghdic.github.io/taskdo-web/`다. 제공받은 `google5880cf420efa6ac1.html`을 Pages 소스 루트에 원본 그대로 보관한다. 확인 경로는 `https://ghdic.github.io/taskdo-web/google5880cf420efa6ac1.html`이다. 소유권 유지를 위해 인증 후에도 이 파일을 삭제하지 않는다.
+
+게시 후 Search Console의 HTML 파일 인증 화면에서 사용자가 확인을 진행한다. 이 URL-prefix 속성의 소유권 인증 결과와 OAuth 브랜딩 심사 결과는 별도로 확인한다. HTML 인증만으로 OAuth 심사가 통과했다고 기록하지 않는다. OAuth 재심사는 소유권 인증 후 화면 안내에 따라 24시간을 기다린 뒤 요청한다.
