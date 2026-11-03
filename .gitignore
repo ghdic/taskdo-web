@@ -1,0 +1,4 @@
+artifacts/
+.taste-skill/
+.DS_Store
+*.log

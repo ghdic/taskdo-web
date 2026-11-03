@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="할 일과 목표, 생각과 메모를 바탕화면에서 관리하는 Mac·Windows 앱 TaskDo.">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#ffffff">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>TaskDo | 달력, 할 일, 메모</title>
+  <link rel="canonical" href="https://ghdic.github.io/taskdo-web/">
+  <link rel="icon" type="image/png" href="assets/taskdo.png">
+  <link rel="stylesheet" href="assets/site.css">
+  <meta property="og:title" content="TaskDo | 달력, 할 일, 메모">
+  <meta property="og:description" content="할 일과 목표, 생각과 메모를 바탕화면에서 관리하는 Mac·Windows 앱 TaskDo.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ghdic.github.io/taskdo-web/">
+  <meta property="og:image" content="https://ghdic.github.io/taskdo-web/assets/taskdo.png">
+</head>
+<body>
+<a class="skip-link" href="#main">본문으로 이동</a>
+<header class="site-header wrap">
+  <a class="brand" href="./" aria-label="TaskDo 홈"><img src="assets/taskdo.png" width="36" height="36" alt="">TaskDo</a>
+  <nav aria-label="주 메뉴"><a href="#screens">앱 화면</a><a href="#download">다운로드</a></nav>
+</header>
+<main id="main">
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <h1 id="hero-title">할 일과 생각을<br>달력 한곳에</h1>
+      <p>일정, 목표, 메모를 바탕화면에서 관리하는<br class="desktop-break"> Mac·Windows 앱.</p>
+      <a class="button" href="#download">앱 다운로드 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5"/></svg></a>
+      <a class="quiet-link" href="#screens">실제 앱 화면 보기</a>
+    </div>
+    <div class="calendar-stage">
+      <div class="calendar-demo" data-ui data-weeks="3">
+        <div class="calendar-heading"><h2 id="calendar-month">달력</h2><button type="button" id="calendar-today">오늘</button></div>
+        <div class="calendar-controls">
+          <label for="week-count">달력 보기 <select id="week-count"><option value="1">1주</option><option value="2">2주</option><option value="3" selected>3주</option><option value="4">4주</option></select></label>
+          <div class="week-navigation"><button type="button" id="previous-week" aria-label="이전 한 주">‹</button><button type="button" id="next-week" aria-label="다음 한 주">›</button></div>
+        </div>
+        <div class="weekdays" aria-hidden="true"><span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span></div>
+        <div id="calendar-days" class="calendar-days" aria-label="날짜 보기"></div>
+        <p class="calendar-range" id="calendar-range" aria-live="polite">앱에서 1주부터 4주까지 선택할 수 있습니다.</p>
+      </div>
+      <noscript><p>달력 체험에는 JavaScript가 필요합니다. 다운로드와 정책 페이지는 그대로 사용할 수 있습니다.</p></noscript>
+      <p class="preview-note">주 수를 바꾸며 날짜 보기를 체험해 보세요.</p>
+    </div>
+  </section>
+
+  <section id="screens" class="showcase wrap" aria-labelledby="screens-title">
+    <div class="showcase-copy">
+      <h2 id="screens-title">TaskDo 화면</h2>
+      <div class="screen-tabs" role="tablist" aria-label="앱 기능 화면" aria-orientation="vertical">
+        <button type="button" id="tab-tasks" role="tab" aria-selected="true" aria-controls="screen-panel" data-screen="tasks"><img src="assets/screens/tasks.png" alt="" width="72" height="66" loading="lazy"><span>달력과 할 일</span></button>
+        <button type="button" id="tab-goals" role="tab" aria-selected="false" aria-controls="screen-panel" tabindex="-1" data-screen="goals"><img src="assets/screens/goals.png" alt="" width="72" height="66" loading="lazy"><span>목표 진행률</span></button>
+        <button type="button" id="tab-memo" role="tab" aria-selected="false" aria-controls="screen-panel" tabindex="-1" data-screen="memo"><img src="assets/screens/memo.png" alt="" width="72" height="66" loading="lazy"><span>독립 메모</span></button>
+        <button type="button" id="tab-routine" role="tab" aria-selected="false" aria-controls="screen-panel" tabindex="-1" data-screen="routine"><img src="assets/screens/routine.png" alt="" width="72" height="66" loading="lazy"><span>반복 루틴</span></button>
+      </div>
+      <p id="screen-description">날짜별 할 일과 우선순위, 떠오른 생각을 같은 화면에서 정리합니다.</p>
+      <p class="note">사용 예시가 포함된 실제 앱 화면입니다.</p>
+    </div>
+    <figure id="screen-panel" role="tabpanel" aria-labelledby="tab-tasks" tabindex="0">
+      <a id="full-screen-link" href="assets/screens/tasks.png" target="_blank" rel="noopener" aria-label="앱 화면 원본 크게 보기"><img id="feature-screen" src="assets/screens/tasks.png" width="1196" height="1260" alt="달력 옆에 날짜별 할 일과 브레인 덤프를 표시한 TaskDo 화면" loading="lazy"></a>
+      <figcaption>이미지를 누르면 크게 볼 수 있습니다.</figcaption>
+    </figure>
+  </section>
+
+  <section class="local-first wrap" aria-labelledby="local-title">
+    <div><h2 id="local-title">기본 저장은 내 기기에</h2><p>인터넷 연결 없이 할 일을 기록하고, 메모를 수정합니다.<br>설정에서 일정과 메모, 첨부 이미지를 ZIP으로 백업할 수 있습니다.</p></div>
+    <a class="text-link" href="privacy/">데이터 처리 방식 보기</a>
+  </section>
+
+  <section id="download" class="downloads wrap" aria-labelledby="download-title">
+    <div class="download-heading"><h2 id="download-title">TaskDo 다운로드</h2><p>0.10.0 미리보기</p></div>
+    <div class="download-list">
+      <div class="download-row"><div><h3>Mac</h3><p>Apple Silicon · macOS 14 이상</p></div><a class="button" href="https://github.com/ghdic/taskdo-web/releases/download/v0.10.0/TaskDo-0.10.0-macos-arm64.zip">Mac용 ZIP 다운로드</a></div>
+      <div class="download-row"><div><h3>Windows</h3><p>64비트 x64 · Windows 10 버전 2004 이상</p></div><a class="button button-secondary" href="https://github.com/ghdic/taskdo-web/releases/download/v0.10.0/TaskDo-0.10.0-windows-x64.zip">Windows용 ZIP 다운로드</a></div>
+    </div>
+    <div class="release-notes"><p>기본 로컬 기능을 사용할 수 있습니다. Google Drive 동기화는 Pro 기능 준비 중으로, 현재 배포본에서는 활성화할 수 없습니다.</p><p>Mac 공증과 Windows 코드 서명 전의 미리보기 배포입니다. Windows 실행·Store 결제와 실제 두 기기 동기화는 검증 중입니다.</p><a href="https://github.com/ghdic/taskdo-web/releases/tag/v0.10.0">릴리스 안내와 파일 검증값</a></div>
+  </section>
+</main>
+<footer class="site-footer wrap">
+  <p>TaskDo · ghdic</p>
+  <nav aria-label="정책 및 문의"><a href="privacy/">개인정보처리방침</a><a href="terms/">이용약관</a><a href="mailto:ghdic77@gmail.com">문의</a></nav>
+  <p>© 2026 TaskDo</p>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
